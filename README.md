@@ -1,27 +1,67 @@
-# CalorieCounter
+# 📟 Calculadora de Calorías
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
+Este proyecto es una pagina web desarrollada con Angular, que permite calcular la cantidad de calorías diarias recomendadas para una persona según su peso, altura y edad. El usuario puede ingresar los datos en el sistema métrico decimal o imperial, y la aplicación realiza la conversión si es necesario.
 
-## Development server
+## Fórmula base para el cálculo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Calorías = (10 × Peso + 6.25 × Altura - 10 × Edad + 5) × Factor
 
-## Code scaffolding
+Donde el Factor se determina según el peso (en libras):
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Menos de 165 lb → 1.6
 
-## Build
+Entre 165 lb y 200 lb → 1.4
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Entre 201 lb y 220 lb → 1.2
 
-## Running unit tests
+Más de 220 lb → 1.0
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Funcionalidades
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+✔️ Selección entre sistema métrico decimal (kg/cm) o imperial (lb/in).
 
-## Further help
+✔️ Validaciones estrictas para asegurar datos correctos:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+  Solo valores numéricos.
+  
+  No se permiten valores negativos.
+  
+  Peso: Entre 40.50 kg - 300 kg.
+  
+  Altura: Entre 1.40 m - 2.25 m.
+  
+  Edad: Entre 16 - 105 años.
+
+✔️ Cálculo en tiempo real al modificar los valores ingresados.
+
+
+## Tecnologías utilizadas
+
+🔹 Angular.
+
+🔹 HTML5, CSS3, TypeScript.
+
+🔹 Tailwindcss.
+
+## Instalación
+
+Para desplegar el proyecto en local, sigue los siguientes pasos:
+
+1. Clona este repositorio:
+   
+         git clone https://github.com/Jeison-Carrero/calorie-counter.git
+   
+2. Importa el proyecto en tu IDE favorito (Visual studio recomendado)
+ 
+3. Abre una terminal y ejecuta el siguiente comando para descargar las dependencias:
+   
+        npm install
+   
+3. Luego ejecuta este comando para ejecutar el proyecto:
+   
+        ng serve
+
+4. copia y pega esta URL en tu navegador favorito para ver la interfaz de usuario:
+
+        http://localhost:4200/   
