@@ -1,6 +1,7 @@
 # 📟 Calculadora de Calorías
 
 Este proyecto es una pagina web desarrollada con Angular, que permite calcular la cantidad de calorías diarias recomendadas para una persona según su peso, altura y edad. El usuario puede ingresar los datos en el sistema métrico decimal o imperial, y la aplicación realiza la conversión si es necesario.
+Se implementó el uso de directivas, servicios locales y pipes para la extructuración del proyecto.
 
 ## Fórmula base para el cálculo
 
